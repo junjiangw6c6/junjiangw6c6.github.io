@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to Jun's page!"
+title: "Jun Jiang / Academic Website"
 author_profile: true
 redirect_from: 
   - /about/
