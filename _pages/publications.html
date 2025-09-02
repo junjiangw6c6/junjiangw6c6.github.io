@@ -13,15 +13,31 @@ author_profile: false
 {% endif %}
 
 {% include base_path %}
-<!-- DEBUG: remove after testing -->
-<p><strong>Debug — categories Jekyll sees:</strong>
-  {{ site.publications | map: "category" | uniq | join: ", " }}</p>
+
+<!-- DEBUG START (remove later) -->
+<p><strong>Debug:</strong>
+ size(site.publications) = <code>{{ site.publications | size }}</code>
+</p>
+
+<p><strong>Collections present:</strong>
+  <code>{{ site.collections | map: "label" | join: ", " }}</code>
+</p>
+
+<ul>
+{% for c in site.collections %}
+  <li>{{ c.label }} — docs: {{ c.docs | size }}</li>
+{% endfor %}
+</ul>
+
+<p><strong>Docs inside “publications”:</strong></p>
 <ul>
 {% for d in site.publications %}
-  <li>{{ d.title }} — <code>{{ d.category }}</code> (path: <code>{{ d.path }}</code>)</li>
+  <li>title: {{ d.title }} — category: <code>{{ d.category }}</code> — path: <code>{{ d.path }}</code></li>
 {% endfor %}
 </ul>
 <hr />
+<!-- DEBUG END -->
+
 
 {% if site.publication_category %}
   {% for category in site.publication_category %}
