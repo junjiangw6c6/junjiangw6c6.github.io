@@ -13,6 +13,15 @@ author_profile: false
 {% endif %}
 
 {% include base_path %}
+<!-- DEBUG: remove after testing -->
+<p><strong>Debug — categories Jekyll sees:</strong>
+  {{ site.publications | map: "category" | uniq | join: ", " }}</p>
+<ul>
+{% for d in site.publications %}
+  <li>{{ d.title }} — <code>{{ d.category }}</code> (path: <code>{{ d.path }}</code>)</li>
+{% endfor %}
+</ul>
+<hr />
 
 {% if site.publication_category %}
   {% for category in site.publication_category %}
