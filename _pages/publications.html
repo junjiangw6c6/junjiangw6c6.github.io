@@ -5,6 +5,11 @@ permalink: /publications/
 author_profile: false
 ---
 
+<!-- ===== BUILD CHECK (remove later) ===== -->
+<p style="background:#fffb91;border:1px solid #e0d300;padding:8px;font-weight:600;">
+  BUILD CHECK — rendered at: {{ "now" | date: "%Y-%m-%d %H:%M:%S %Z" }}
+</p>
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">
     You can also find my articles on
@@ -14,45 +19,45 @@ author_profile: false
 
 {% include base_path %}
 
-<!-- DEBUG START (remove later) -->
-<p><strong>Debug:</strong>
- size(site.publications) = <code>{{ site.publications | size }}</code>
-</p>
-
-<p><strong>Collections present:</strong>
-  <code>{{ site.collections | map: "label" | join: ", " }}</code>
-</p>
-
-<ul>
-{% for c in site.collections %}
-  <li>{{ c.label }} — docs: {{ c.docs | size }}</li>
-{% endfor %}
-</ul>
-
-<p><strong>Docs inside “publications”:</strong></p>
-<ul>
-{% for d in site.publications %}
-  <li>title: {{ d.title }} — category: <code>{{ d.category }}</code> — path: <code>{{ d.path }}</code></li>
-{% endfor %}
-</ul>
-<hr />
-<!-- DEBUG END -->
-
-
-{% if site.publication_category %}
-  {% for category in site.publication_category %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}{% continue %}{% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+<!-- ===== DEBUG (remove later) ===== -->
+<div style="border:1px dashed #ccc;padding:10px;margin:12px 0;">
+  <p><strong>Debug</strong></p>
+  <p>size(site.publications) = <code>{{ site.publications | size }}</code></p>
+  <p>Collections present: <code>{{ site.collections | map: "label" | join: ", " }}</code></p>
+  <ul>
+  {% for c in site.collections %}
+    <li>{{ c.label }} — docs: {{ c.docs | size }}</li>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
+  </ul>
+
+  <p><strong>Docs inside “publications”:</strong></p>
+  <ul>
+  {% for d in site.publications %}
+    <li>title: {{ d.title }} — category: <code>{{ d.category }}</code> — path: <code>{{ d.path }}</code></li>
+  {% endfor %}
+  </ul>
+</div>
+<!-- ===== END DEBUG ===== -->
+
+<!-- ===== MANUAL RENDERING BY CATEGORY ===== -->
+
+<h2>Journal Articles</h2><hr />
+{% for p in site.publications reversed %}
+  {% if p.category == "manuscripts" %}
     {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  {% endif %}
+{% endfor %}
+
+<h2>Under Review</h2><hr />
+{% for p in site.publications reversed %}
+  {% if p.category == "under_review" %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+<h2>In Progress</h2><hr />
+{% for p in site.publications reversed %}
+  {% if p.category == "in_progress" %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
