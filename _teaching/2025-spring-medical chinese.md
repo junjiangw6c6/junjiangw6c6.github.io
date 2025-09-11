@@ -2,7 +2,7 @@
 title: "Language for Specific Purposes (LSP): Medical Chinese"
 collection: teaching
 type: "Instructor - Graduate course"
-permalink: /teaching/2025-spring-Medical Chinese
+permalink: /teaching/2025-spring-medical chinese
 venue: "Center for Language Study (CLS), Yale University"
 date: 2025-23-01
 location: "New Haven, CT"
