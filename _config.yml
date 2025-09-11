@@ -21,9 +21,9 @@ author:
   location: "New Haven"
   employer: "Yale University, School of the Environment"
   email: "jun.jiang@yale.edu"
-  googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  orcid: ""                         # leave blank or put your real ORCID URL
-  pubmed: ""                        # remove placeholder that points to 'john snow'
+  #googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  #orcid: ""                         # leave blank or put your real ORCID URL
+  #pubmed: ""                        # remove placeholder that points to 'john snow'
   researchgate: "https://www.researchgate.net/profile/Jun-Jiang-77"
   github: "junjiangw6c6"
   linkedin: ""                      # add if you want
