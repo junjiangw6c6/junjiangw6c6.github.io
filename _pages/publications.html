@@ -5,15 +5,57 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<div class="wordwrap">
+  You can also find my work on
+  <a href="https://www.researchgate.net/profile/Jun-Jiang-77" target="_blank" rel="noopener">my ResearchGate profile</a>.
+</div>
+
+<hr />
+
+<h2>Selected Publications</h2>
+<ul class="bibliography">
+  <li>
+    Wang, Y; Li, W; Chen, S; Zhang, J; Liu, X; <strong>Jiang, J</strong>; Chen, L; Tang, Z; Wan, X; Lian, X; Liang, B; Xie, S; Ma, J; Guo, X; Dong, Y; Wu, L; Li, J; Koutrakis, P.
+    <em>PM<sub>2.5</sub> constituents associated with childhood obesity and larger BMI growth trajectory: a 14-year longitudinal study.</em>
+    <a href="https://doi.org/10.1016/j.envint.2024.108417" target="_blank" rel="noopener">https://doi.org/10.1016/j.envint.2024.108417</a>
+  </li>
+
+  <li>
+    <strong>Jiang, J</strong>; Lau, P.W.C.; Li, Y; Gao, D; Chen, L; Chen, M; Ma, Y; Ma, T; Ma, Q; Zhang, Y; Liu, J; Wang, X; Dong, Y; Song, Y; Ma, J.
+    <em>Association of fast-food restaurants with overweight and obesity in school-aged children and adolescents: A systematic review and meta-analysis.</em>
+    <a href="https://doi.org/10.1111/obr.13536" target="_blank" rel="noopener">https://doi.org/10.1111/obr.13536</a>
+  </li>
+
+  <li>
+    Li, J; Song, Y; Shi, L; <strong>Jiang, J</strong>; Wan, X; Wang, Y; Ma, Y; Dong, Y; Zou, Z; Ma, J.
+    <em>Long-term effects of ambient PM<sub>2.5</sub> constituents on metabolic syndrome in Chinese children and adolescents.</em>
+    <a href="https://doi.org/10.1016/j.envres.2023.115238" target="_blank" rel="noopener">https://doi.org/10.1016/j.envres.2023.115238</a>
+  </li>
+
+  <li>
+    Chen, L; Gao, D; Ma, T; Chen, M; Li, Y; Ma, Y; Wen, B; <strong>Jiang, J</strong>; Wang, X; Zhang, J; Chen, S; Wu, L; Li, W; Liu, X; Guo, X; Huang, S; Wei, J; Song, Y; Ma, J; Dong, Y.
+    <em>Could greenness modify the effects of physical activity and air pollutants on overweight and obesity among children and adolescents?</em>
+    <a href="https://doi.org/10.1016/j.scitotenv.2022.155117" target="_blank" rel="noopener">https://doi.org/10.1016/j.scitotenv.2022.155117</a>
+  </li>
+
+  <li>
+    Chen, L; Xie, J; Ma, T; Chen, M; Gao, D; Li, Y; Ma, Y; Wen, B; <strong>Jiang, J</strong>; Wang, X; Zhang, J; Chen, S; Wu, L; Li, W; Liu, X; Dong, B; Wei, J; Guo, X; Huang, S; Song, Y; Dong, Y; Ma, J.
+    <em>Greenness alleviates the effects of ambient particulate matter on the risks of high blood pressure in children and adolescents.</em>
+    <a href="https://doi.org/10.1016/j.scitotenv.2021.152431" target="_blank" rel="noopener">https://doi.org/10.1016/j.scitotenv.2021.152431</a>
+  </li>
+
+  <li>
+    Chen, L; Wei, J; Ma, T; Gao, D; Wang, X; Wen, B; Chen, M; Li, Y; <strong>Jiang, J</strong>; Wu, L; Li, W; Liu, X; Song, Y; Guo, X; Dong, Y; Ma, J.
+    <em>Ambient gaseous pollutant exposure and incidence of visual impairment among children and adolescents: findings from a longitudinal, two-center cohort study in China.</em>
+    <a href="https://doi.org/10.1007/s11356-022-20025-3" target="_blank" rel="noopener">https://doi.org/10.1007/s11356-022-20025-3</a>
+  </li>
+</ul>
+
+<!-- Optional: keep your existing collection-based rendering for future items -->
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
       {% if post.category != category[0] %}
@@ -31,6 +73,3 @@ author_profile: true
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-
-
