@@ -26,7 +26,7 @@ author:
   #pubmed: ""                        # remove placeholder that points to 'john snow'
   researchgate: "https://www.researchgate.net/profile/Jun-Jiang-77"
   github: "junjiangw6c6"
-  linkedin: "https://www.linkedin.com/in/jun-jiang-urban-health"                      # add if you want
+  linkedin: "jun-jiang-urban-health"                      # add if you want
 
 # Publication categories (kept as you had them)
 publication_category:
